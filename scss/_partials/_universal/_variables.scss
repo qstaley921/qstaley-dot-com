@@ -9,11 +9,13 @@ $padding-desktop-edges: 100px;
 Typography Variables Section
 ******************************************/
   $font-family: josefin-sans, sans-serif;
+  $font-family-article: 'Cormorant Garamond', serif;
   $font-size-small-body: .75em;
   $font-size-body: 1em;
   $font-size-reading: 1.25em;
   $font-size-heading: 1.75em;
   $font-size-title: 2.5em;
+  $font-size-dropcap: 2.75em;
   $font-size-subheading: 1.25em;
 
   $section-lead-2x: 4em;
@@ -45,11 +47,24 @@ Typography Variables Section
     font-style: normal;
   }
 
+  @mixin font-article-regular {
+    font-family: $font-family-article;
+    font-weight: 500;
+    font-style: normal;
+  }
+
   @mixin font-emphasis {
     font-family: $font-family;
     font-weight: 400;
     font-style: italic;
   }
+
+  @mixin font-article-emphasis {
+    font-family: $font-family-article;
+    font-weight: 500;
+    font-style: italic;
+  }
+
 
   // This is what you'll @include for 'bold' weighted fonts
   @mixin font-bold-emphasis {
@@ -58,10 +73,22 @@ Typography Variables Section
     font-style: italic;
   }
 
+  @mixin font-article-bold {
+    font-family: $font-family-article;
+    font-weight: 700;
+    font-style: normal;
+  }
+
   @mixin font-bold {
     font-family: $font-family;
     font-weight: 700;
     font-style: normal;
+  }
+
+  @mixin font-article-bold-emphasis {
+    font-family: $font-family-article;
+    font-weight: 700;
+    font-style: italic;
   }
 
   @mixin moz-fix {

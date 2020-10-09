@@ -134,8 +134,14 @@
       padding-right: $padding-desktop-edges;
     }
 
-    .drop-cap {
-      width: 60px;
+    .long-article {
+      p {
+        @include font-article-regular;
+      }
+
+      em {
+        @include font-article-emphasis;
+      }
     }
   } // main section close
 } // page body section close

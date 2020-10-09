@@ -2,16 +2,15 @@
 
 .drop-cap {
   display: inline-block;
-  width: 50px;
-  height: 75px;
+  width: 40px;
+  height: 50px;
   margin-right: 10px;
-  margin-top: 9px;
-  padding-bottom: 15px;
-  background: $primary-color;
+  margin-left: -5px;
+  margin-top: -10px;
   text-align: center;
   float: left;
-  color: white;
-  font-size: $font-size-title;
+  color: black;
+  font-size: $font-size-dropcap;
   -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: black;
   text-shadow:  0 1px 0 #ccc,
@@ -26,5 +25,4 @@
              0 5px 10px rgba(0,0,0,.25),
              0 10px 10px rgba(0,0,0,.2),
              0 20px 20px rgba(0,0,0,.15);
-  box-shadow: $dropshadow-icon;
 }
