@@ -3,17 +3,20 @@
 Layout / Unit / Grid Variables Section
 ******************************************/
 $logo-size-mobile: 3em;
+$padding-desktop-edges: 100px;
 
 /******************************************
 Typography Variables Section
 ******************************************/
   $font-family: josefin-sans, sans-serif;
+  $font-size-small-body: .75em;
   $font-size-body: 1em;
   $font-size-reading: 1.25em;
   $font-size-heading: 1.75em;
   $font-size-title: 2.5em;
   $font-size-subheading: 1.25em;
 
+  $section-lead-2x: 4em;
   $section-lead: 2.5em;
   $object-lead: .75em;
   $paragraph-lead: 1em;

@@ -1,6 +1,8 @@
+// this is for creating the 3D-esque titles on each of the article headers
+
 .title-heading {
   width: 100vw;
-  height: 200px;
+  height: 250px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -9,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 25px;
+  padding-bottom: 60px;
 
   h1 {
     display: inline-block;

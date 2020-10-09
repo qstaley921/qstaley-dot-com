@@ -10,3 +10,15 @@ body {
   margin-top: 90px;
   padding-bottom: 100px;
 }
+
+main, footer { // adjustments to apply everywhere to a page's max-width
+  @include media($media-tablet) {
+    max-width: $media-tablet;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media($media-desktop) {
+    max-width: $media-desktop;
+  }
+}

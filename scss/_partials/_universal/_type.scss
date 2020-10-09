@@ -6,6 +6,7 @@
 
 a {
   color: black;
+  @include font-regular;
 }
 
 h1 {
@@ -59,5 +60,13 @@ text classes // for one-off fixes
 }
 
 .bold-text {
+  @include font-bold;
+}
 
+.bold-text-em {
+  @include font-bold-emphasis;
+}
+
+.white-text {
+  color: white;
 }

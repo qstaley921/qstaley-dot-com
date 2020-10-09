@@ -2,21 +2,68 @@
 
 #home-page { // the id is in the body tag
 
-    padding-left: 25px;
-    padding-right: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
+  header {
+    @include media($media-tablet) {
+      max-width: $media-tablet;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    header {
+    @include media($media-desktop) {
+      max-width: $media-desktop;
+    }
 
-      p {
-        margin-top: $object-lead;
-        margin-bottom: -10px;
+    @include media($media-tablet) {
+      width: 550px;
+    }
+
+    p {
+      margin-top: $object-lead;
+      margin-bottom: -10px;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @include media($media-tablet) {
+      max-width: $media-tablet;
+      margin-top: $section-lead-2x;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+
+      & article:nth-of-type(2n-1) { // affects the odd numbered articles
+        justify-self: end;
+      }
+
+      & article:nth-of-type(2n) { // affects the even numbered articles
+        justify-self: start;
+      }
+
+    }
+
+    @include media($media-desktop) {
+      max-width: $media-desktop;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      & article:nth-of-type(3n-2) { // affects the first third
+        justify-self: end;
+      }
+
+      & article:nth-of-type(3n-1) { // affects the middle second
+        justify-self: center;
+      }
+
+      & article:nth-of-type(3n) {
+        justify-self: start;
       }
     }
+  }
 }

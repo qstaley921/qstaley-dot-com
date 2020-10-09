@@ -4,10 +4,7 @@
     background-image: linear-gradient(to bottom, rgba(255,255,255, .5) 40%, 70%, rgba(0,0,0, 1) 100%), url("assets/thumbnails/bnw-disappearance-thumbnail.jpg");
   }
 
-  section {
-    grid-template-areas:
-    "avatar table table";
-  }
+  
 
   .drop-cap {
     background: lightgrey;

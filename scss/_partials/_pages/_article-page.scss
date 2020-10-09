@@ -1,0 +1,141 @@
+// put all the default styles to "article-pages" here, then go on to edit with the IDs
+// added to the body of article pages with the class="article-page"
+// article pages are all pages that aren't "menu-pages". For instance, the home-page is a menu page
+
+.article-page {
+
+  header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    // height: see *title heading symbol for other adjustments
+
+    .full-width-back { // which is just a div that contains the max width
+      width: 100vw;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: white;
+      border-top: solid gray 1px;
+      height: 40px;
+
+      @include media($media-desktop) {
+        height: 30px;
+      }
+    }
+
+    .tag-ribbon {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      height: 40px;
+      overflow-x: scroll;
+
+      @include media($media-tablet) {
+        max-width: $media-tablet;
+      }
+
+      @include media($media-desktop) {
+        max-width: $media-desktop;
+        height: 30px;
+        padding-left: $padding-desktop-edges;
+        padding-right: $padding-desktop-edges;
+      }
+
+
+      .meta-tag {
+        display: flex;
+        position: relative;
+        align-items: center;
+        height: 75%;
+        padding: 2px 10px 7px 82px;
+        border-radius: 25px;
+        border: solid black 1px;
+        white-space: nowrap;
+        background: $primary-color;
+        margin-left: 10px;
+        margin-bottom: -2px;
+        color: white;
+        size: $font-size-body;
+
+        @include media($media-desktop) {
+          size: $font-size-small-body;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: right;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 75px; // remember to change the left padding on .meta-tag
+          padding-right: 3px;
+          padding-left: 3px;
+          padding-bottom: 5px;
+          background-color: white;
+          border-radius: 25px 0 0 25px;
+          border-right: solid black 1px;
+          @include font-bold;
+          color: black;
+        }
+      }
+    }
+  }
+
+  main {
+    padding: 0 20px;
+    margin-top: $section-lead;
+
+    .article-intro {
+
+      @include media($media-tablet) {
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        grid-row: auto;
+        grid-column-gap: 15px;
+        grid-template-areas:
+          "avatar commentor ."
+          ". commentary .";
+        width: 475px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: -50px;
+      }
+      .avatar {
+        display: inline-block;
+        margin-right: 10px;
+        grid-area: avatar;
+      }
+
+      .commentary-text {
+        grid-area: commentary;
+      }
+
+      .commentor-text {
+        display: inline-block;
+        margin-bottom: 5px;
+        line-height: 1.25;
+        @include font-emphasis;
+        grid-area: commentor;
+      }
+    } // .article-intro end
+
+    @include media($media-desktop) {
+      padding-left: $padding-desktop-edges;
+      padding-right: $padding-desktop-edges;
+    }
+
+    .drop-cap {
+      width: 60px;
+    }
+  } // main section close
+} // page body section close

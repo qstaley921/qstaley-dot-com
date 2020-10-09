@@ -9,24 +9,37 @@ nav {
   padding: 15px;
   z-index: 100;
   background: white;
-  display: flex;
-  align-items: end;
   border-bottom: black 3px solid;
   box-shadow: 0px 2.5px 5px rgba(0, 0, 0, .5);
 
+  .width-container { // which is just a div that contains the max width
+    display: flex;
+    justify-content: space-between;
+
+    @include media($media-tablet) {
+      max-width: $media-tablet;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include media($media-desktop) {
+      max-width: $media-desktop;
+    }
+  }
+
   a {
     display: inline-block;
-    height: 100%;
-    width: auto;
+    height: 50px;
+    min-width: 50px;
 
   }
 
   img {
-    height: 100%;
+    max-height: 40px;
+    margin-top: -5px;
   }
 
   h1 {
-    margin-left: auto;
     display: inline-block;
     margin-top: -10px;
     @include moz-fix {
@@ -34,6 +47,7 @@ nav {
     }
   }
 
+// the below elements are for creating the tri-color blue underlining the nav bar at the top of each page
   span {
     height: 3px;
     display: inline-block;
