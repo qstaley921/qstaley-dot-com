@@ -1,0 +1,28 @@
+// used for tables with the class="meta-tabe" meta as in metadata for the pages
+ .meta-table {
+  border-spacing: 0;
+  width: 250px;
+
+  td {
+    @include font-light;
+    padding-top: 5px;
+    padding-bottom: 2px;
+
+    &:first-child {
+      @include font-regular;
+      text-align: right;
+      padding-right: 5px;
+      border-right: solid rgba(0,0,0,.5) 1px;
+    }
+
+    &:last-child {
+      padding-left: 5px;
+    }
+  }
+
+  tr:nth-of-type(-n+2){ //selects first two rows
+    td {
+      border-bottom: solid rgba(0,0,0,.5) 1px;
+    }
+  }
+ }

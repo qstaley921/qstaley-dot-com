@@ -1,0 +1,22 @@
+// This is a partial dedicated to the #home-page;
+
+#home-page { // the id is in the body tag
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+
+      p {
+        margin-top: $object-lead;
+        margin-bottom: -10px;
+      }
+    }
+}

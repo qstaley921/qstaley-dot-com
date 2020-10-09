@@ -1,0 +1,59 @@
+// applies only to the brandlyland page with id="brandy-land"
+
+#brandy-land {
+  padding: 0;
+
+  header {
+    background-image: linear-gradient(to bottom, rgba(255,255,255, .5) 40%, 70%, rgba(104,182,229, 1) 100%), url("assets/thumbnails/candy-land-thumbnail.jpg");
+  }
+
+  main {
+    padding: 0 20px;
+    margin-top: $section-lead;
+
+    section {
+      display: grid;
+      grid-template-columns: auto auto 1fr;
+      grid-template-rows: auto;
+      column-gap: 15px;
+      row-gap: 15px;
+      justify-items: center;
+      grid-template-areas:
+        "avatar text text"
+        ". table table";
+
+      .avatar {
+        grid-area: avatar;
+      }
+
+      table {
+        grid-area: table;
+        align-self: center;
+      }
+
+      .commentary-text {
+        grid-area: text;
+
+        .bold-text {
+          @include font-emphasis;
+        }
+      }
+    }
+
+    .drop-cap {
+      width: 60px;
+    }
+
+
+  } // main section close
+
+
+
+
+
+
+
+
+
+
+}

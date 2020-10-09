@@ -1,0 +1,60 @@
+// affects all navigations on all _pages
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  padding: 15px;
+  z-index: 100;
+  background: white;
+  display: flex;
+  align-items: end;
+  border-bottom: black 3px solid;
+  box-shadow: 0px 2.5px 5px rgba(0, 0, 0, .5);
+
+  a {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+
+  }
+
+  img {
+    height: 100%;
+  }
+
+  h1 {
+    margin-left: auto;
+    display: inline-block;
+    margin-top: -10px;
+    @include moz-fix {
+      margin-bottom: -5px;
+    }
+  }
+
+  span {
+    height: 3px;
+    display: inline-block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
+
+  .blue-ribbon {
+    width: 50%;
+    z-index: 3;
+    background-color: $primary-color;
+  }
+  .light-ribbon {
+    width: 70%;
+    z-index: 2;
+    background-color: $accent-color;
+  }
+
+  .white-ribbon {
+    width: 80%;
+    background-color: white;
+  }
+}

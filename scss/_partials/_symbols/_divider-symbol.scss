@@ -1,0 +1,34 @@
+// this sheet is for stylizing the 'divider' symbol the div with the class of "divider"
+
+.divider {
+  margin: $section-lead auto;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 3px;
+  background: black;
+  position: relative;
+
+  span {
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+  }
+
+  .blue-ribbon {
+    width: 80%;
+    z-index: 3;
+    background: $primary-color;
+  }
+  .light-ribbon {
+    width: 15%;
+    z-index: 4;
+    background: $accent-color;
+  }
+  .white-ribbon {
+    width: 85%;
+    z-index: 2;
+    background: white;
+  }
+}

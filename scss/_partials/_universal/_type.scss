@@ -1,0 +1,63 @@
+@import url("https://use.typekit.net/nul4bgv.css");
+
+* {
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  @include font-bold;
+  font-size: $font-size-heading;
+}
+
+h2 {
+  @include font-light;
+  font-size: $font-size-subheading;
+}
+
+p {
+  @include font-regular;
+  font-size: $font-size-body;
+  text-align: justify;
+  line-height: $font-body-lineheight;
+}
+
+.long-article {
+  p {             // for adjusting paragraphs within articles
+    margin-bottom: $paragraph-lead;
+    font-size: $font-size-reading;
+    text-align: left;
+  }
+
+  em {
+    @include font-light-emphasis;
+  }
+}
+
+/******************************************
+text classes // for one-off fixes
+******************************************/
+
+.small-heading {
+  @include font-bold;
+  font-size: $font-size-subheading;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-left {
+  text-align: left;
+}
+
+.commentary-text {
+  @include font-light-emphasis;
+}
+
+.bold-text {
+
+}

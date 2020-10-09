@@ -1,0 +1,18 @@
+// affects the elements with the class="avatar"
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: solid white 2px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: $dropshadow-icon;
+
+  img {
+    height: 100%;
+    position: absolute;
+    bottom: -5px;
+    transform: scale(1.15);
+  }
+}

@@ -1,0 +1,95 @@
+// Includes all variables / mixins to be used in other partials respectively
+/******************************************
+Layout / Unit / Grid Variables Section
+******************************************/
+$logo-size-mobile: 3em;
+
+/******************************************
+Typography Variables Section
+******************************************/
+  $font-family: josefin-sans, sans-serif;
+  $font-size-body: 1em;
+  $font-size-reading: 1.25em;
+  $font-size-heading: 1.75em;
+  $font-size-title: 2.5em;
+  $font-size-subheading: 1.25em;
+
+  $section-lead: 2.5em;
+  $object-lead: .75em;
+  $paragraph-lead: 1em;
+
+  $font-heading-lineheight: 2;
+  $font-subheading-lineheight: 1.75;
+  $font-body-lineheight: 1.5;
+
+  // This is what you'll @include for 'light' weighted fonts
+  @mixin font-light {
+    font-family: $font-family;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @mixin font-light-emphasis {
+    font-family: $font-family;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  // This is what you'll @include for 'regular' weighted fonts
+  @mixin font-regular {
+    font-family: $font-family;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @mixin font-emphasis {
+    font-family: $font-family;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  // This is what you'll @include for 'bold' weighted fonts
+  @mixin font-bold-emphasis {
+    font-family: $font-family;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  @mixin font-bold {
+    font-family: $font-family;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @mixin moz-fix {
+    @-moz-document url-prefix() {
+      @content;
+    }
+  }
+
+
+/******************************************
+Styles Variables Section
+******************************************/
+$default-background: white;
+$primary-color: #0B60AE;
+$primary-rgba: 11,96,174;
+$accent-rgba: 104,182,229;
+$accent-color: #68B6E5;
+
+$dropshadow-section: 0 5px 5px rgba(0,0,0,.25);
+$dropshadow-icon: 1px 2px 5px rgba(0,0,0,.5);
+
+/******************************************
+Media Types Variables Section
+******************************************/
+// it will be a mobile first design, these are the breaks
+$media-tablet: 768px;
+$media-desktop: 1024px;
+
+// you will use @include media($media-tablet){css}; as nested per tag items
+@mixin media($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
