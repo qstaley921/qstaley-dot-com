@@ -1,7 +1,7 @@
 // applies all styles to the q-card
 
 .q-card { // the outer article div
-  width: 300px;
+  width: 280px;
   height: 375px;
   padding: 15px;
   position: relative;
@@ -10,6 +10,14 @@
   border-radius: 15px;
   box-shadow: 2.5px 2.5px 5px rgba(0,0,0,.50);
   margin-bottom: $section-lead;
+
+  &:last-of-type {
+    margin-bottom: 0;
+
+    @include media($media-tablet) {
+      margin-bottom: $section-lead;
+    }
+  }
 
   @include media($media-tablet) {
     margin-bottom: $section-lead-2x;
