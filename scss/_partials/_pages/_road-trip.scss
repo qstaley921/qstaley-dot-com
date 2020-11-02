@@ -1,0 +1,51 @@
+// Applies to all pages with the <body id="road-trip"> #road-trip
+
+#road-trip {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255,255,255, .5) 40%, 70%, rgba(104,182,229, 1) 100%), url("assets/thumbnails/road-trip-thumbnail.jpg");
+  }
+
+  .article-nav {
+    margin-top: $section-lead;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    @include media($media-tablet) {
+      width: 75%;
+    }
+
+    @include media($media-desktop) {
+      width: $media-tablet;
+    }
+  }
+  .art-nav-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    #atlanta { // first child of grid
+      grid-column-start: 1;
+      grid-column-end: -1;
+      min-width: 140px;
+      justify-self: center;
+
+      @include media($media-tablet) {
+        min-width: 175px;
+      }
+    }
+
+    @include media($media-tablet) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include media($media-desktop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .button-title {
+    
+  }
+}

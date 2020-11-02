@@ -1,0 +1,71 @@
+// contains all the button classes
+// first the button class without a header, which is just a button .button class="button"
+// then contains the button with a head, which is .button-title class="button-title" 
+
+.button {
+
+  @include media($media-desktop) {
+    size: $font-size-small-body;
+  }
+}
+
+.button-title {
+  position: relative;
+  display: inline;
+  border-radius: 25px;
+  padding-left: 35px;
+  padding-right: 10px;
+  height: 30px;
+  line-height: 190%;
+  border: solid black 1px;
+  white-space: nowrap;
+  background: white;
+  color: black;
+  size: $font-size-body;
+  text-align: center;
+  text-overflow: ellipsis;
+  transition: all .1s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: $primary-color;
+    color: white;
+    transform: scale(.97);
+
+    & span {
+      background: white;
+      color: black;
+    }
+  }
+
+  @include media($media-desktop) {
+    size: $font-size-small-body;
+  }
+
+  span {
+    text-align: center;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    line-height: 150%;
+    width: 30px;
+    padding-left: 5px;
+    background-color: $primary-color;
+    border-radius: 25px 0 0 25px;
+    border-right: solid black 1px;
+    @include font-bold;
+    color: white;
+  }
+}
+
+.button-title-active {
+  background: $primary-color; 
+  color: white;
+
+  span {
+    background: white;
+    color: black;
+  }
+}

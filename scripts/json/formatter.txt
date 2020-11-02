@@ -1,0 +1,12 @@
+// json formatter.txt 
+
+There are Four Rules to format JSON 
+<p class="test">This Paragraph is a JSON Test</p>
+1. \ all "
+2. ALL <tags> need to end with a />
+3. \ all /
+4. inner ", ' turn into &quot; and &apos;
+
+so, the example <p> in JSON looks like: 
+
+<p class=\"test\" \/>This Paragraph&apos;s a JSON Test<\/p>

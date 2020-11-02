@@ -105,7 +105,7 @@ body {
     max-width: 1024px; } }
 
 footer {
-  width: 100%;
+  width: 100vw;
   height: 30px;
   position: absolute;
   bottom: 0;
@@ -244,11 +244,13 @@ nav {
     width: 100%;
     height: 100%; }
   .q-card .thumbnail {
-    max-width: 100%;
+    width: 100%;
+    object-position: 50%;
+    object-fit: cover;
     display: inline-block;
     margin: 0 auto;
     border-radius: 15px;
-    margin-bottom: 25px; }
+    margin-bottom: 15px; }
   .q-card .tag {
     position: absolute;
     display: flex;
@@ -305,27 +307,6 @@ nav {
     bottom: -5px;
     transform: scale(1.15); }
 
-.meta-table {
-  border-spacing: 0;
-  width: 250px; }
-  .meta-table td {
-    font-family: josefin-sans, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    padding-top: 5px;
-    padding-bottom: 2px; }
-    .meta-table td:first-child {
-      font-family: josefin-sans, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      text-align: right;
-      padding-right: 5px;
-      border-right: solid rgba(0, 0, 0, 0.5) 1px; }
-    .meta-table td:last-child {
-      padding-left: 5px; }
-  .meta-table tr:nth-of-type(-n+2) td {
-    border-bottom: solid rgba(0, 0, 0, 0.5) 1px; }
-
 .divider {
   margin: 2.5em auto;
   display: flex;
@@ -358,7 +339,7 @@ nav {
   margin-right: 10px;
   margin-left: -5px;
   margin-top: -10px;
-  text-align: center;
+  text-align: right;
   float: left;
   color: black;
   font-size: 2.75em;
@@ -366,30 +347,30 @@ nav {
   -webkit-text-stroke-color: black;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
-.design-figure {
+.article-figure {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 2.5em auto;
   width: 100%; }
-  .design-figure .img-holder {
+  .article-figure .img-holder {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%; }
-    .design-figure .img-holder:hover .carousel-hover {
+    .article-figure .img-holder:hover .carousel-hover {
       background: rgba(255, 255, 255, 0.95);
       box-shadow: inset 0 0 100px black;
       cursor: pointer; }
-    .design-figure .img-holder:hover h2 {
+    .article-figure .img-holder:hover h2 {
       color: black; }
-  .design-figure img {
+  .article-figure img {
     width: 100%;
     height: auto;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5); }
-  .design-figure .carousel-hover {
+  .article-figure .carousel-hover {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -401,24 +382,80 @@ nav {
     background: rgba(255, 255, 255, 0);
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0);
     transition: all ease .5s; }
-    .design-figure .carousel-hover h2 {
+    .article-figure .carousel-hover h2 {
       font-family: josefin-sans, sans-serif;
       font-weight: 700;
       font-style: normal;
       font-size: 1.75em;
       color: rgba(0, 0, 0, 0);
       transition: all ease .5s; }
-  .design-figure figcaption {
+  .article-figure figcaption {
     width: 80%;
     text-align: center;
     margin-top: 0.75em;
     font-family: josefin-sans, sans-serif;
     font-weight: 300;
     font-style: italic; }
-    .design-figure figcaption strong {
+    .article-figure figcaption strong {
       font-family: josefin-sans, sans-serif;
       font-weight: 400;
       font-style: italic; }
+
+@media (min-width: 1024px) {
+  .button {
+    size: 0.75em; } }
+
+.button-title {
+  position: relative;
+  display: inline;
+  border-radius: 25px;
+  padding-left: 35px;
+  padding-right: 10px;
+  height: 30px;
+  line-height: 190%;
+  border: solid black 1px;
+  white-space: nowrap;
+  background: white;
+  color: black;
+  size: 1em;
+  text-align: center;
+  text-overflow: ellipsis;
+  transition: all .1s ease-out; }
+  .button-title:hover {
+    cursor: pointer;
+    background: #0B60AE;
+    color: white;
+    transform: scale(0.97); }
+    .button-title:hover span {
+      background: white;
+      color: black; }
+  @media (min-width: 1024px) {
+    .button-title {
+      size: 0.75em; } }
+  .button-title span {
+    text-align: center;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    line-height: 150%;
+    width: 30px;
+    padding-left: 5px;
+    background-color: #0B60AE;
+    border-radius: 25px 0 0 25px;
+    border-right: solid black 1px;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white; }
+
+.button-title-active {
+  background: #0B60AE;
+  color: white; }
+  .button-title-active span {
+    background: white;
+    color: black; }
 
 #home-page {
   padding-left: 25px;
@@ -588,5 +625,39 @@ nav {
 
 #sabbath header {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 40%, 70%, #68b6e5 100%), url("assets/thumbnails/sabbath-thumbnail.jpg"); }
+
+#road-trip header {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 40%, 70%, #68b6e5 100%), url("assets/thumbnails/road-trip-thumbnail.jpg"); }
+#road-trip .article-nav {
+  margin-top: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+  @media (min-width: 768px) {
+    #road-trip .article-nav {
+      width: 75%; } }
+  @media (min-width: 1024px) {
+    #road-trip .article-nav {
+      width: 768px; } }
+#road-trip .art-nav-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px; }
+  #road-trip .art-nav-list #atlanta {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    min-width: 140px;
+    justify-self: center; }
+    @media (min-width: 768px) {
+      #road-trip .art-nav-list #atlanta {
+        min-width: 175px; } }
+  @media (min-width: 768px) {
+    #road-trip .art-nav-list {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media (min-width: 1024px) {
+    #road-trip .art-nav-list {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
 /*# sourceMappingURL=styles.css.map */

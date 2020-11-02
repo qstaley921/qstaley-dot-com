@@ -34,11 +34,13 @@
   }
 
   .thumbnail {
-    max-width: 100%;
+    width: 100%; 
+    object-position: 50%;
+    object-fit: cover;
     display: inline-block;
     margin: 0 auto;
     border-radius: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .tag {

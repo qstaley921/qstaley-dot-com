@@ -1,0 +1,75 @@
+// this is for stylizing figures and captions for design pages
+// class is .ariticle-figure
+
+.article-figure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: $section-lead auto;
+  width: 100%;
+
+  .img-holder {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+
+    &:hover .carousel-hover {
+      background: rgba(255,255,255,.95);
+      box-shadow: inset 0 0 100px rgba(0,0,0,1);
+      cursor: pointer;
+    }
+
+    &:hover h2 {
+      color: black;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    box-shadow: $dropshadow-icon;
+  }
+
+  .carousel-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0);
+    transition: all ease .5s;
+
+
+    h2 {
+      @include font-bold;
+      font-size: $font-size-heading;
+      color: rgba(0,0,0,0);
+      transition: all ease .5s;
+    }
+  }
+
+  figcaption {
+    width: 80%;
+    text-align: center;
+    margin-top: $object-lead;
+    @include font-light-emphasis;
+
+    strong {
+      @include font-emphasis;
+    }
+  }
+
+
+
+
+
+
+
+}
