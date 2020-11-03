@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************
 Layout / Unit / Grid Variables Section
 ******************************************/
@@ -659,5 +660,78 @@ nav {
   @media (min-width: 1024px) {
     #road-trip .art-nav-list {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+#quotes header {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 40%, 70%, #68b6e5 100%), url("assets/thumbnails/quotes-thumbnail.jpg"); }
+#quotes .time-bar {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3); }
+#quotes article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #quotes article button {
+    margin-bottom: 2.5em;
+    position: relative;
+    padding: 5px 15px 7px;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+    background: #0B60AE;
+    color: white;
+    border: solid black 2px;
+    border-radius: 50px; }
+  #quotes article .quote-box {
+    width: 98%;
+    padding: 10px 15px 170px;
+    background: rgba(0, 0, 0, 0.1);
+    background-size: 150px;
+    background-image: url("assets/imgs/quotes-bear.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    border-radius: 15px;
+    transition: all .5s ease-out;
+    position: relative; }
+    @media (min-width: 768px) {
+      #quotes article .quote-box {
+        max-width: 500px; } }
+    #quotes article .quote-box::before {
+      content: '"';
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 6em;
+      position: absolute;
+      top: -40px;
+      left: -20px; }
+  #quotes article .quote {
+    margin-bottom: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.75em;
+    text-align: left; }
+    #quotes article .quote::after {
+      content: '"';
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1em; }
+  #quotes article .citation::after {
+    content: ", "; }
+  #quotes article .citation::before {
+    content: ", "; }
+  #quotes article .source::before {
+    content: "— "; }
+  #quotes article .source {
+    text-align: right; }
 
 /*# sourceMappingURL=styles.css.map */

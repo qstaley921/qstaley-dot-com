@@ -1,0 +1,93 @@
+// this page holds all the page specific css for <body id="quotes">
+
+#quotes {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255,255,255, .5) 40%, 70%, rgba(104,182,229, 1) 100%), url("assets/thumbnails/quotes-thumbnail.jpg");
+  }
+
+  .time-bar {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,.3);
+  }
+
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      margin-bottom: $section-lead;
+      position: relative;
+      padding: 5px 15px 7px;
+      @include font-bold;
+      font-size: $font-size-body;
+      background: $primary-color;
+      color: white;
+      border: solid black 2px;
+      border-radius: 50px;
+    }
+
+    .quote-box {
+      width: 98%;
+      padding: 10px 15px 170px;
+      background: rgba(0,0,0,.1);
+      background-size: 150px;
+      background-image: url("assets/imgs/quotes-bear.png");
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: bottom;
+      border-radius: 15px;
+      transition: all .5s ease-out;
+      // border: solid black 1.5px;
+      position: relative;
+
+      @include media($media-tablet) {
+        max-width: 500px;
+      }
+      
+      &::before {
+        content: '"';
+        @include font-article-bold-emphasis;
+        font-size: 6em;
+        // transform: rotate(15deg);
+        position: absolute;
+        top: -40px;
+        left: -20px;
+      }
+    }
+
+    .quote {
+      margin-bottom: 10px;
+      @include font-article-emphasis;
+      font-size: $font-size-heading;
+      text-align: left;
+
+      &::after {
+        content: '"';
+        @include font-article-bold-emphasis;
+        font-size: 1em;
+      }
+    }
+
+    .citation::after {
+      content: ", ";
+    }
+    .citation::before {
+      content: ", "
+    }
+    .source::before {
+      content: "— "
+    }
+    .source {
+      text-align: right;
+    }
+  }
+
+}
+
